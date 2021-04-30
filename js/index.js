@@ -1,11 +1,14 @@
 window.onscroll = function (event) {
   let navbarFixed = document.querySelector(".header");
+  let toTop = document.querySelector("#pushToTop");
   if (window.scrollY > 10) {
     navbarFixed.classList.add("header--sticky");
+    toTop.classList.add("visibleButton");
     //hoặc
     //navbarFixed.style.padding = "20px 15px";
   } else {
     navbarFixed.classList.remove("header--sticky");
+    toTop.classList.remove("visibleButton");
     //hoặc
     //navbarFixed.style.padding = "25px 15px";
   }
