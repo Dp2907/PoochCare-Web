@@ -36,7 +36,7 @@ html {
   --bg-light: rgba(147, 107, 232, 0.05);
   --iframe-filter: grayscale(0%);
   --widget-bg: #3f3a64;
-  --footer-color: #5f5f5f;
+  --footer-color: #696969;
 }
 
 [data-theme="dark"] {
@@ -50,6 +50,11 @@ html {
   --nav-color: #fff;
   --bg-light: #222;
   --dropdown-color: #151515;
+  --footer-color: #afafaf;
+}
+
+body {
+  background-color: var(--bg-color);
 }
 
 h1 {
@@ -386,6 +391,7 @@ a.dropdown-item:hover::before {
   height: 2rem;
   line-height: 2rem;
   text-align: center;
+  margin-right: 1rem;
 }
 
 /* STATS */
@@ -438,7 +444,7 @@ a.dropdown-item:hover::before {
 .pricing__content {
   background-color: var(--bg-color);
   border-radius: var(--border-radius);
-  padding: 3.5rem 0;
+  padding: 2rem 0 1rem 0;
 }
 
 .pricing__content__top {
@@ -496,7 +502,7 @@ a.dropdown-item:hover::before {
 }
 
 .pricing__content p span {
-  color: #999;
+  color: var(--font-color);
   padding: 0;
 }
 
@@ -533,6 +539,27 @@ a.dropdown-item:hover::before {
   margin: 0;
 }
 
+.pricing__content > a,
+.pricing__content__bottom > a {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: var(--border-radius);
+  font-size: 1.2rem;
+  margin: 2rem 0;
+  display: inline-block;
+}
+
+.pricing__content > a:hover,
+.pricing__content__bottom > a:hover {
+  background-color: #116e32;
+  border-color: #116e32;
+}
+
+.pricing__content ul li {
+  color: var(--font-color);
+}
 /* BLOG */
 
 .blog {
@@ -611,11 +638,17 @@ a.dropdown-item:hover::before {
 .feedback__item__detail {
   display: flex;
 }
+
 .feedback__item__detail img {
   height: 4rem !important;
   width: 4rem !important;
   border-radius: 50%;
   margin-right: 2rem;
+}
+.feedback__item__detail h5 {
+  color: var(--heading-color);
+  padding: 0;
+  margin: 0;
 }
 
 /* SUBSCRIBE */
@@ -721,4 +754,55 @@ a.dropdown-item:hover::before {
 }
 .footer__bottom a:hover {
   color: #b12619;
+}
+
+/* THEME */
+
+/*-- toggle switch --*/
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  margin: 0;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+/*-- //toggle switch --*/
+/*-- dark and light mode styling --*/
+.mode-container {
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding: 3px 0;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.fa-sun {
+  display: none;
+}
+
+.fa-moon {
+  display: block;
+}
+
+input:checked + .mode-container i.fa-sun {
+  display: block;
+}
+
+input:checked + .mode-container i.fa-moon {
+  display: none;
 }
