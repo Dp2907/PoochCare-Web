@@ -164,6 +164,10 @@ img {
   font-weight: 600;
 }
 
+a.navbar-brand:hover {
+  opacity: 0.95;
+}
+
 a.nav-link,
 a.dropdown-item {
   font-size: 1.2rem;
@@ -176,6 +180,22 @@ a.dropdown-item {
 }
 
 .nav-item a:hover {
+  color: var(--primary-color);
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-toggle span {
+  color: var(--heading-color);
+  transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+.dropdown-toggle:hover span {
   color: var(--primary-color);
 }
 
@@ -233,7 +253,7 @@ a.dropdown-item:hover::before {
     right: 0;
   }
 
-  .dropdown{
+  .dropdown {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -488,6 +508,10 @@ a.dropdown-item:hover::before {
   -webkit-transition: all 0.5s ease;
 }
 
+.features__item:hover {
+  background-color: var(--bg-light);
+}
+
 .features__item i {
   color: var(--primary-color);
   font-size: 1.5rem;
@@ -692,6 +716,15 @@ a.dropdown-item:hover::before {
 .pricing__content__bottom {
   padding: 1rem;
   border-radius: 0 0 10px 10px;
+}
+
+.pricing__content__bottom li,
+.pricing__content li {
+  margin: 1rem 0;
+}
+
+.pricing__content > p {
+  margin-bottom: 3rem;
 }
 
 .pricing__content__top h4,
@@ -960,11 +993,19 @@ a.dropdown-item:hover::before {
   .subscribe .container p {
     width: 80%;
   }
+  .subscribe .container form {
+    display: flex;
+    flex-direction: column;
+  }
+  .subscribe .container form input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 /* FOOTER */
 .footer__top {
   background-color: #111111;
-  padding: 3rem 0;
+  padding: 4rem 0 3rem 0;
 }
 .footer__top h1 {
   color: #fff;
@@ -995,6 +1036,10 @@ a.dropdown-item:hover::before {
   -o-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
+}
+
+.footer__detail {
+  padding-top: 2rem;
 }
 
 .footer__detail ul li {
@@ -1040,6 +1085,7 @@ body > a {
   width: 3rem;
   height: 3rem;
   text-align: center;
+  text-decoration: none;
   line-height: 2.5rem;
   border-radius: 50%;
   background-color: var(--primary-color);
@@ -1047,6 +1093,10 @@ body > a {
   -o-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
+}
+
+body > a:hover {
+  color: #000;
 }
 
 .visibleButton {
