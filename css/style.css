@@ -209,7 +209,7 @@ a.dropdown-item:hover::before {
 @media screen and (max-width: 992px) {
   .navbar-toggler {
     display: block;
-    margin-left: 2rem;
+    margin-left: 3rem;
     position: absolute;
     right: 0;
     top: 1.2rem;
@@ -219,9 +219,7 @@ a.dropdown-item:hover::before {
   .navbar-toggler i {
     color: #fff;
   }
-  .navbar button {
-    background-color: var(--primary-color);
-  }
+
   .navbar-nav {
     display: flex;
     flex-direction: column;
@@ -235,18 +233,42 @@ a.dropdown-item:hover::before {
     right: 0;
   }
 
-  .dropdown,
-  .dropleft,
-  .dropright,
-  .dropup {
+  .dropdown{
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
+  .navbar button i {
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 4px;
+  }
+
   .navbar-expand-lg .navbar-nav .dropdown-menu {
     transform: translateX(0);
+  }
+
+  button.navbar-toggler.collapsed .fa-bars {
+    display: block;
+  }
+
+  button.navbar-toggler .fa-bars {
+    display: none;
+  }
+
+  button.navbar-toggler .fa-times {
+    display: block;
+  }
+
+  button.navbar-toggler.collapsed .fa-times {
+    display: none;
   }
 }
 
@@ -1071,11 +1093,11 @@ toggle switch*/
 }
 
 .fa-moon {
-  display: block;
+  display: inline-block;
 }
 
 input:checked + .mode-container i.fa-sun {
-  display: block;
+  display: inline-block;
 }
 
 input:checked + .mode-container i.fa-moon {
