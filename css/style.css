@@ -133,6 +133,7 @@ img {
   background-color: var(--bg-color);
   border-bottom: none;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 
 .header {
@@ -218,8 +219,8 @@ a.dropdown-item:hover::before {
   border-radius: var(--border-radius);
   background: var(--dropdown-color);
   border: 1px solid var(--border-color);
-  min-width: 13rem;
-  padding: 0 0.5rem;
+  min-width: 12rem;
+  padding: 1rem 0;
 }
 
 .dropdown-item:hover {
@@ -1109,11 +1110,6 @@ toggle switch*/
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
-}
-
-.theme-switch-wrapper em {
-  margin-left: 10px;
-  font-size: 1rem;
 }
 
 .theme-switch {
